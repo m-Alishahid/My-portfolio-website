@@ -133,6 +133,27 @@ const listItemsVariants={
             </button>
 
             {/* menu list */}
+
+
+const ContactPage = ({ isSidebarOpen }) => {
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Clean up when component unmounts or when `isSidebarOpen` changes
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isSidebarOpen]);
+
+             
+             
+
+
+             
             {open && (  
              <motion.div 
              variants={listVariants}
