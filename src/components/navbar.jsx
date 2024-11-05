@@ -20,6 +20,22 @@ const links =[
 const Navbar = () => {
     const [open,setOpen] = useState(false);
 
+
+ useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'; // Disable background scroll
+    } else {
+      document.body.style.overflow = 'auto'; // Re-enable background scroll
+    }
+    return () => {
+      document.body.style.overflow = 'auto'; // Clean up on unmount
+    };
+  }, [open]);
+
+
+
+    
+
 const topVariants={
    closed:{
       rotate:0,
@@ -132,28 +148,7 @@ const listItemsVariants={
                   </motion.div>
             </button>
 
-            {/* menu list */}
-
-
-const ContactPage = ({ isSidebarOpen }) => {
-  useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    // Clean up when component unmounts or when `isSidebarOpen` changes
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isSidebarOpen]);
-
-             
-             
-
-
-             
+            {/* menu list */}             
             {open && (  
              <motion.div 
              variants={listVariants}
