@@ -20,17 +20,14 @@ const links =[
 const Navbar = () => {
     const [open,setOpen] = useState(false);
 
-
  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden'; // Disable background scroll
-    } else {
-      document.body.style.overflow = 'auto'; // Re-enable background scroll
-    }
-    return () => {
-      document.body.style.overflow = 'auto'; // Clean up on unmount
-    };
-  }, [open]);
+      if (open) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }, [open]);
+
 
 
 
@@ -154,7 +151,7 @@ const listItemsVariants={
              variants={listVariants}
               initial="closed" 
               animate="opened"
-               className='absolute top-0 left-0 w-screen min-h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40'>
+               className='fixed inset-0 top-0 left-0 w-screen min-h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40'>
            
            
             {links.map((link)=>( 
