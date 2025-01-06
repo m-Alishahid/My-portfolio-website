@@ -62,7 +62,7 @@ const PortfolioPage = () => {
 
     return ( 
         <motion.div 
-            className='h-full'
+            className='h-full bg-gradient-to-b from-blue-200 to-purple-200'
             initial={{ y: "-200vh" }}
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
