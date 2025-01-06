@@ -27,7 +27,7 @@ const AboutPage = () => {
         >
             
             {/* container */}
-            <div className="h-full  lg:flex">
+            <div className="h-full  lg:flex bg-gradient-to-b from-blue-200 to-purple-200">
                 {/* text container */}
                 <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr0 xl:1/2">
                     {/* journey container */}
