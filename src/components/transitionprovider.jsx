@@ -10,7 +10,7 @@ const TransitionProvider = ({ children }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName} className="flex flex-col min-h-screen bg-gradient-to-b from-blue-200 to-purple-200">
+      <div key={pathName} className="flex flex-col min-h-screen">
 
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
