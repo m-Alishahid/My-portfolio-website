@@ -32,7 +32,7 @@ const Footer = () => {
   
         {/* Copyright */}
         <div className="mt-6 text-center text-gray-700 text-sm">
-          © 2024 Muhammad Ali Shahid. All rights reserved.
+          © 2025 Muhammad Ali Shahid. All rights reserved.
         </div>
       </footer>
     );
